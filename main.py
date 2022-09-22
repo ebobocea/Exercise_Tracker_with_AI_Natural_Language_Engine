@@ -6,7 +6,7 @@ API_KEY = "40510ed79f98e989525b951cf980f9b8"
 nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
 nutritionix_params = {
- "query": "ran 3 miles",
+ "query": input("What exercises did you do today?: "),
 }
 headers = {
  "x-app-id": APP_ID,
@@ -14,5 +14,5 @@ headers = {
 }
 
 response = requests.post(url=nutritionix_endpoint, json=nutritionix_params, headers=headers)
-
-print(response.text)
+result = response.json()
+print(result)
