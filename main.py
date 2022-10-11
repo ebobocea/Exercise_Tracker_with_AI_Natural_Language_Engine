@@ -1,8 +1,9 @@
+import os
 import requests
 from datetime import datetime
 
-APP_ID = "aaa4dab8"
-API_KEY = "40510ed79f98e989525b951cf980f9b8"
+APP_ID = os.environ['app-id']
+API_KEY = os.environ['app-key']
 
 nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
